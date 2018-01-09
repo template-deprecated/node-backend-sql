@@ -1,0 +1,26 @@
+{
+  "name": "rdf",
+  "version": "0.0.1-alpha.1",
+  "description": "backend of random food (rdf)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamontat/rdf-backend.git"
+  },
+  "keywords": [
+    "food",
+    "thai",
+    "random",
+    "backend",
+    "server"
+  ],
+  "author": "Kamontat Chantrachirathumrong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kamontat/rdf-backend/issues"
+  },
+  "homepage": "https://github.com/kamontat/rdf-backend#readme"
+}
