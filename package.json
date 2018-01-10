@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --timeout 10000 --colors --exit ./tests/**/*.spec.js",
+    "mocha": "mocha --reporters",
+    "cov": "nyc npm test"
   },
   "repository": {
     "type": "git",
@@ -28,10 +30,16 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "morgan": "^1.9.0",
-    "pg": "^7.4.1",
-    "sequelize": "^4.29.3"
+    "pg": "^6.4.2",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.29.3",
+    "uuid": "^3.1.0"
   },
   "devDependencies": {
-    "nodemon": "^1.14.10"
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "mocha": "^4.1.0",
+    "nodemon": "^1.14.10",
+    "nyc": "^11.4.1"
   }
 }

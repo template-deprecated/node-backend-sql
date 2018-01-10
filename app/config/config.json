@@ -1,0 +1,33 @@
+{
+  "development": {
+    "username": "rdf-admin",
+    "password": null,
+    "database": "rdf-dev",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "migrationStorage": "json",
+    "migrationStoragePath": "app/db/_sequelizeMeta.json",
+    "logging": false
+  },
+  "test": {
+    "username": "rdf-admin",
+    "password": null,
+    "database": "rdf-test",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "logging": false
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "rdf_production",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres",
+    "operatorsAliases": false
+  }
+}
