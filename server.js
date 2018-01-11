@@ -42,7 +42,11 @@ app.get('*', (req, res) => res.status(404).send({
   message: 'Empty pages, learn how to use in documents page',
 }));
 
-app.listen(port)
+const server = app.listen(port)
 
-module.exports = app;
+module.exports = {
+  app: app,
+  server: server
+};
+
 console.log('RESTful API server started on: ' + port);

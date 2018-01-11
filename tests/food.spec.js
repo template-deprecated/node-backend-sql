@@ -19,8 +19,13 @@ chai.use(chaiHttp);
 
 //Our parent block
 describe('Foods', () => {
-    before(function () {
+    before(() => {
         return model.sequelize.sync();
+    });
+
+    after((done) => {
+        server.server.close();
+        done();
     });
 
     /*
@@ -28,7 +33,7 @@ describe('Foods', () => {
      */
     describe('/GET book', () => {
         it('it should GET all the foods', (done) => {
-            chai.request(server)
+            chai.request(server.app)
                 .get('/api/v1/foods')
                 .then(function (res) {
                     expect(res).to.have.status(200);

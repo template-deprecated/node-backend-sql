@@ -4,10 +4,11 @@
   "description": "backend of random food (rdf)",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
+    "start:watch": "nodemon server.js",
     "test": "mocha --timeout 10000 --colors --exit ./tests/**/*.spec.js",
-    "mocha": "mocha --reporters",
-    "cov": "nyc npm test"
+    "test:watch": "npm test -- --watch",
+    "cov": "nyc npm test",
   },
   "repository": {
     "type": "git",
