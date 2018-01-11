@@ -21,6 +21,15 @@
     "operatorsAliases": false,
     "logging": false
   },
+  "citest": {
+    "username": "POSTGRES_USER",
+    "password": null,
+    "database": "POSTGRES_DB",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
   "production": {
     "username": "root",
     "password": null,

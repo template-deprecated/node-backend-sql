@@ -5,10 +5,16 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "start:watch": "nodemon server.js",
-    "test": "mocha --timeout 10000 --colors --exit ./tests/**/*.spec.js",
-    "test:watch": "npm test -- --watch",
-    "cov": "nyc npm test",
+    "start:watch": "NODE_ENV=development nodemon server.js",
+    "start:dev": "NODE_ENV=development node run start",
+    "start:dev:watch": "NODE_ENV=development node run start:watch",
+    "start:prod": "NODE_ENV=production node run start",
+    "test": "NODE_ENV=test mocha --timeout 10000 --colors --exit ./tests/**/*.spec.js",
+    "test:watch": "NODE_ENV=test npm test -- --watch",
+    "cov": "NODE_ENV=test nyc npm test",
+    "cov:check": "NODE_ENV=test nyc check-coverage --lines 70 --functions 70 --statements 70 --branches 70",
+    "ci:test": "NODE_ENV=citest npm run test",
+    "ci:report": "NODE_ENV=citest nyc report --reporter=text-lcov"
   },
   "repository": {
     "type": "git",
