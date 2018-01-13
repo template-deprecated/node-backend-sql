@@ -1,0 +1,36 @@
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "db_dev",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "migrationStorage": "json",
+    "migrationStoragePath": "app/db/_sequelizeMeta.json",
+    "logging": false
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "db_test",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "logging": false
+  },
+  "citest": {
+    "username": "root",
+    "password": null,
+    "database": "circle_test",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL"
+  }
+}

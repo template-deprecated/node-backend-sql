@@ -1,0 +1,62 @@
+{
+  "name": "template-nodejs",
+  "version": "0.0.1-alpha.1",
+  "description": "Example code",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:watch": "nodemon server.js",
+    "start:dev": "NODE_ENV=development node run start",
+    "start:dev:watch": "NODE_ENV=development node run start:watch",
+    "start:prod": "NODE_ENV=production node run start",
+    "test:mocha": "mocha --timeout 10000 --colors --exit ./tests/**/*.spec.js",
+    "test": "NODE_ENV=test npm run test:mocha",
+    "test:watch": "NODE_ENV=test npm test -- --watch",
+    "cov": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
+    "cov:check": "nyc check-coverage --lines 70 --functions 70 --statements 70 --branches 70",
+    "ci:test": "NODE_ENV=citest nyc npm run test:mocha -- --reporter mocha-junit-reporter",
+    "ci:report": "NODE_ENV=citest nyc report --reporter=lcov > coverage.lcov && codecov",
+    "monitor:start": "pm2 start server.js --name rdf-server",
+    "monitor:stop": "pm2 stop rdf-server",
+    "monitor:show": "pm2 show rdf-server",
+    "monitor:restart": "pm2 restart rdf-server",
+    "monitor:delete": "pm2 delete rdf-server",
+    "monitor:log": "pm2 logs rdf-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Template-Generating/nodeJS-Backend.git"
+  },
+  "keywords": [
+    "api",
+    "restful",
+    "template",
+    "example"
+  ],
+  "author": "Kamontat Chantrachirathumrong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Template-Generating/nodeJS-Backend/issues"
+  },
+  "homepage": "https://github.com/Template-Generating/nodeJS-Backend#readme",
+  "dependencies": {
+    "async": "^2.6.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "pg": "^6.4.2",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.29.3",
+    "superagent": "^3.8.2",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "codecov": "^3.0.0",
+    "mocha": "^4.1.0",
+    "mocha-junit-reporter": "^1.15.0",
+    "nodemon": "^1.14.10",
+    "nyc": "^11.4.1"
+  }
+}
