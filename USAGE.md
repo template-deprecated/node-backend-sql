@@ -1,5 +1,7 @@
 # Example usage
 
+1. create `postgres user` call **root** (with command `createuser --superuser --createrole --createdb --echo root`)
+1. create `postgres database` call **db_dev** (with command `createdb -U root db_dev`)
 1. open [package.json](package.json)
     1. update `name`, `version`, `description`, `repository`, `keywords`, `author`, `license`, `bugs`, `homepage`
 1. open [README.md](README.md)
@@ -18,9 +20,8 @@
  
 ### App
 
-1. config - database config
 1. controllers - database controller
-1. db - migration and seeding
+1. db - config, migration and seeding
 1. models - database models
 1. routes - API routing
 
