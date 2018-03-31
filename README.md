@@ -28,7 +28,8 @@
 
 1. Use `NodeJS` as **Backend framework**
 1. Use `postgres` as **Database**
-1. Use `sequelize` as **RESTful API**
+1. Use `sequelize` as **Object model and a Relational database (ORM)**
+1. Use `express` as **RESTful API**
 1. Use `mocha` as **Test library**
 1. Use `nyc` as **Coverage reporter**
 1. Use `heroku` as **Deployment server**
